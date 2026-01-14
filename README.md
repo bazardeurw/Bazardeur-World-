@@ -1,2 +1,2 @@
 # Bazardeur-World-
-Votre satisfaction est notre priorité 
+Votre satisfaction , notre priorité 
