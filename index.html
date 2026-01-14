@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE & TECH | Boutique Officielle</title>
+    <style>
+        /* --- STYLE GÉNÉRAL (Noir et Blanc) --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: #ffffff; color: #000000; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        header {
+            position: sticky; top: 0; background: #fff; z-index: 1000;
+            border-bottom: 1px solid #eee; padding: 20px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-size: 24px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+        nav ul { display: flex; gap: 25px; }
+        nav ul li a { font-size: 13px; font-weight: 600; text-transform: uppercase; }
+        nav ul li a:hover { color: #888; }
+        .nav-icons { display: flex; gap: 20px; font-size: 18px; cursor: pointer; }
+
+        /* --- SECTION HERO (Bannière) --- */
+        .hero {
+            height: 90vh; background: #000; color: #fff;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; padding: 0 20px;
+        }
+        .hero h1 { font-size: 3.5rem; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; font-weight: 300; letter-spacing: 2px; }
+        .btn-shop {
+            padding: 15px 40px; border: 1px solid #fff; color: #fff;
+            text-transform: uppercase; font-size: 14px; letter-spacing: 2px;
+        }
+        .btn-shop:hover { background: #fff; color: #000; }
+
+        /* --- GRILLE DE CATÉGORIES --- */
+        .categories { padding: 80px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .cat-card {
+            height: 450px; background: #f9f9f9; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; border: 1px solid #eee;
+            position: relative; overflow: hidden;
+        }
+        .cat-card:hover { border: 1px solid #000; }
+        .cat-card h3 { text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; }
+        .cat-card .btn-discover { font-size: 12px; border-bottom: 1px solid #000; padding-bottom: 5px; }
+
+        /* --- PRODUITS (Exemple) --- */
+        .section-title { text-align: center; margin: 60px 0 40px; text-transform: uppercase; letter-spacing: 5px; }
+        .products { padding: 0 5% 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .product-item { text-align: center; }
+        .product-img { width: 100%; height: 300px; background: #f0f0f0; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; font-style: italic; color: #ccc; }
+        .product-item h4 { font-size: 16px; margin-bottom: 5px; }
+        .product-item p { font-weight: bold; font-size: 14px; }
+
+        /* --- FOOTER --- */
+        footer { background: #000; color: #fff; padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        footer h4 { margin-bottom: 20px; text-transform: uppercase; font-size: 14px; }
+        footer p, footer li { font-size: 13px; color: #bbb; margin-bottom: 10px; cursor: pointer; }
+        footer li:hover { color: #fff; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav ul { display: none; } /* On cache le menu sur mobile pour simplifier */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MODERNA</div>
+        <nav>
+            <ul>
+                <li><a href="#">Électronique</a></li>
+                <li><a href="#">Sacs de Luxe</a></li>
+                <li><a href="#">Sandales</a></li>
+                <li><a href="#">Vêtements</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <span>🔍</span>
+            <span>👤</span>
+            <span>👜 (0)</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>L'Innovation & Le Style</h1>
+        <p>Électronique haut de gamme et mode de luxe.</p>
+        <a href="#categories" class="btn-shop">Explorer la collection</a>
+    </section>
+
+    <h2 class="section-title" id="categories">Nos Univers</h2>
+    <section class="categories">
+        <div class="cat-card">
+            <h3>Électronique</h3>
+            <p>Audio haute fidélité</p><br>
+            <a href="#" class="btn-discover">DÉCOUVRIR</a>
+        </div>
+        <div class="cat-card">
+            <h3>Maroquinerie</h3>
+            <p>Sacs Femme & Homme</p><br>
+            <a href="#" class="btn-discover">DÉCOUVRIR</a>
+        </div>
+        <div class="cat-card">
+            <h3>Sandales</h3>
+            <p>Luxe et confort</p><br>
+            <a href="#" class="btn-discover">DÉCOUVRIR</a>
+        </div>
+        <div class="cat-card">
+            <h3>Prêt-à-porter</h3>
+            <p>Mode minimaliste</p><br>
+            <a href="#" class="btn-discover">DÉCOUVRIR</a>
+        </div>
+    </section>
+
+    <h2 class="section-title">Nouveautés</h2>
+    <section class="products">
+        <div class="product-item">
+            <div class="product-img">Image Casque</div>
+            <h4>Casque Audio Sans Fil</h4>
+            <p>350,00 €</p>
+        </div>
+        <div class="product-item">
+            <div class="product-img">Image Sac</div>
+            <h4>Sac à main Cuir Noir</h4>
+            <p>1 200,00 €</p>
+        </div>
+        <div class="product-item">
+            <div class="product-img">Image Sandales</div>
+            <h4>Sandales de Soirée</h4>
+            <p>450,00 €</p>
+        </div>
+        <div class="product-item">
+            <div class="product-img">Image Robe</div>
+            <h4>Robe Longue Élégante</h4>
+            <p>290,00 €</p>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h4>À Propos</h4>
+            <p>Votre destination exclusive pour les produits alliant technologie de pointe et élégance intemporelle.</p>
+        </div>
+        <div>
+            <h4>Service Client</h4>
+            <ul>
+                <li>Livraisons & Retours</li>
+                <li>Guide des tailles</li>
+                <li>FAQ</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Newsletter</h4>
+            <p>Inscrivez-vous pour les nouveautés.</p>
+            <input type="text" placeholder="Votre email" style="background:#222; border:none; padding:10px; color:#fff; width:100%;">
+        </div>
+    </footer>
+
+</body>
+                      </html>
+  
